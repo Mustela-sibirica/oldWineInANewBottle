@@ -1,6 +1,6 @@
 #! /usr/bin/python3
 #-*-conding:utf-8-*-
-# Copyright (c) 2017 - SUN Lei <leosun@zju.edu.cn>
+# Copyright (c) 2017 - SUN Lei <leisun@genetics.ac.cn>
 
 import random
 
