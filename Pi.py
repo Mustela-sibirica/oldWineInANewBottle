@@ -6,7 +6,7 @@
 
 import numpy 
 
-num = 10000 #number of iterative
+num = 727 #number of iterative
 
 r = 1
 n = 6
