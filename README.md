@@ -7,4 +7,5 @@ https://en.wikipedia.org/wiki/Liu_Hui%27s_%CF%80_algorithm
 ###     TO DO
 ##   abacus 算盘
 ###     Addition
-###     TO Do
+###     Subtraction
+###     TO DO
