@@ -242,7 +242,7 @@ def abacusToString(abacus):                                                     
 
 Aygend_abacus = abacus                                                          #初始化算盘
 
-Aygend = 720                                                                    #定义被加数     "727"
+Aygend = 727                                                                    #定义被加数     "727"
 Addend = 119                                                                    #定义加数       "119"
 
 #Num_Decimal = 3                                                                 #定义小数位数   3
