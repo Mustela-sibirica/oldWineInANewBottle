@@ -44,7 +44,7 @@ abacus = [                                          #21档算盘
 [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],        #下珠
 [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]         #底珠
 ]
-
+Column_abacus = len(abacus[0])
 def finger_abacus(number,place,abacus):             #拨珠子
     if number == 0:
         pass
@@ -217,18 +217,18 @@ def Addition(number_1,number_2,abacus):                     #主函数
 
 def abacusToNumber(abacus):                                                            #算盘读数为数字
     number_abacus = 0
-    for i in range(21):
-        number_abacus = number_abacus + abacus[1][i]*5*pow(10,21-1-i-Num_Decimal) + abacus[2][i]*1*pow(10,21-1-i-Num_Decimal)
+    for i in range(Column_abacus):
+        number_abacus = number_abacus + abacus[1][i]*5*pow(10,Column_abacus-1-i-Num_Decimal) + abacus[2][i]*1*pow(10,Column_abacus-1-i-Num_Decimal)
     return number_abacus
 
 def abacusToString(abacus):                                                            #算盘读数为字符串
     string_abacus = ""
-    for i in range(21-Num_Decimal):
+    for i in range(Column_abacus-Num_Decimal):
         number_temp = abacus[1][i]*5 + abacus[2][i]*1
         string_abacus = string_abacus + str(number_temp)
     if Num_Decimal > 0:
         string_abacus = string_abacus + "."
-    for i in range(21-Num_Decimal,21):
+    for i in range(Column_abacus-Num_Decimal,Column_abacus):
         number_temp = abacus[1][i]*5 + abacus[2][i]*1
         string_abacus = string_abacus + str(number_temp)
     string_list = list(string_abacus)
