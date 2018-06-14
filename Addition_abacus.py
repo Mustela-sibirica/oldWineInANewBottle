@@ -7,7 +7,7 @@ AddTypeI = [                                        ##直接加
 "02","12","22",          "52","62","72",            #二上二
 "03","13",               "53","63",                 #三上三
 "04",                    "54",                      #四上四
-"05","15","25","35","45"                            #五上五
+"05","15","25","35","45",                           #五上五
 "06","16","26","36",                                #六上六
 "07","17","27",                                     #七上七
 "08","18",                                          #八上八
@@ -125,7 +125,7 @@ def Addition(number_1,number_2,abacus):                     #主函数
         b = Addend_align[i]
         place = -(len_temp-i)
         type = a + b
-        if b == 0:
+        if b == '0':
             pass
         elif type in AddTypeI:
             if b == "1":
@@ -242,7 +242,7 @@ def abacusToString(abacus):                                                     
 
 Aygend_abacus = abacus                                                          #初始化算盘
 
-Aygend = 727                                                                    #定义被加数     "727"
+Aygend = 720                                                                    #定义被加数     "727"
 Addend = 119                                                                    #定义加数       "119"
 
 #Num_Decimal = 3                                                                 #定义小数位数   3
