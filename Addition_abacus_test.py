@@ -242,11 +242,11 @@ def abacusToString(abacus):                                                     
 
 Aygend_abacus = abacus                                                          #初始化算盘
 
-Aygend = 727727727727727727727727727727727727727                                                                    #定义被加数     "727"
-Addend = 119119119119119119119119119119119119119                                                                    #定义加数       "119"
+Aygend = '727727727727727727727727727727727727727.727'                                                                    #定义被加数     '727727727727727727727727727727727727727.727'
+Addend = '119119119119119119119119119119119119119.119'                                                                    #定义加数       '119119119119119119119119119119119119119.119'
 
 #Num_Decimal = 3                                                                 #定义小数位数   3
 Num_Decimal = max(len(number_Split(Aygend)[1]),len(number_Split(Addend)[1]))     #小数根据给定数字确定
 
 result = abacusToString(Addition(Aygend,Addend,Aygend_abacus))                  #计算结果
-print(result)                                                                   #输出结果
+print(result)                                                                   #输出结果    846846846846846846846846846846846846846.846
