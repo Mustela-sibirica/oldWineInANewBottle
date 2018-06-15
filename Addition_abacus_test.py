@@ -168,6 +168,7 @@ def Addition(number_1,number_2,abacus):                     #主函数
                 elif abacus[2][place-1-j] == 4 and abacus[1][place-1-j] == 0:
                     abacus[2][place-1-j] = 0
                     abacus[1][place-1-j] = 1
+                    break
                 elif abacus[2][place-1-j] == 4 and abacus[1][place-1-j] == 1:
                     abacus[2][place-1-j] = 0
                     abacus[1][place-1-j] = 0
@@ -195,13 +196,14 @@ def Addition(number_1,number_2,abacus):                     #主函数
                 abacus[2][place] -= 1
         elif type in AddTypeIV:
             abacus[1][place] -= 1
-            for j in range(9999):                                                   #进位检测
+            for j in range(9999):                                                   #进位检查
                 if abacus[2][place-1-j] != 4:
                     abacus[2][place-1-j] += 1
                     break
                 elif abacus[2][place-1-j] == 4 and abacus[1][place-1-j] == 0:
                     abacus[2][place-1-j] = 0
                     abacus[1][place-1-j] = 1
+                    break
                 elif abacus[2][place-1-j] == 4 and abacus[1][place-1-j] == 1:
                     abacus[2][place-1-j] = 0
                     abacus[1][place-1-j] = 0
@@ -242,11 +244,11 @@ def abacusToString(abacus):                                                     
 
 Aygend_abacus = abacus                                                          #初始化算盘
 
-Aygend = '727727727727727727727727727727727727727.727'                                                                    #定义被加数     '727727727727727727727727727727727727727.727'
-Addend = '119119119119119119119119119119119119119.119'                                                                    #定义加数       '119119119119119119119119119119119119119.119'
+Aygend = '727727727727727727727727727727727727727.727'                                                                    #定义被加数     "727"
+Addend = '119119119119119119119119119119119119119.119'                                                                    #定义加数       "119"
 
 #Num_Decimal = 3                                                                 #定义小数位数   3
 Num_Decimal = max(len(number_Split(Aygend)[1]),len(number_Split(Addend)[1]))     #小数根据给定数字确定
 
 result = abacusToString(Addition(Aygend,Addend,Aygend_abacus))                  #计算结果
-print(result)                                                                   #输出结果    846846846846846846846846846846846846846.846
+print(result)                                                                   #输出结果
