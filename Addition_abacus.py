@@ -38,11 +38,11 @@ AddTypeIV = [                                       ##破五进位加
 ]
 
 abacus = [                                          #21档算盘
-[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],        #顶珠
-[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],        #上珠
+[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],        #顶珠
+[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],        #上珠
 
-[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],        #下珠
-[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]         #底珠
+[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],        #下珠
+[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]         #底珠
 ]
 Column_abacus = len(abacus[0])
 def finger_abacus(number,place,abacus):             #拨珠子
@@ -168,6 +168,7 @@ def Addition(number_1,number_2,abacus):                     #主函数
                 elif abacus[2][place-1-j] == 4 and abacus[1][place-1-j] == 0:
                     abacus[2][place-1-j] = 0
                     abacus[1][place-1-j] = 1
+                    break
                 elif abacus[2][place-1-j] == 4 and abacus[1][place-1-j] == 1:
                     abacus[2][place-1-j] = 0
                     abacus[1][place-1-j] = 0
@@ -195,13 +196,14 @@ def Addition(number_1,number_2,abacus):                     #主函数
                 abacus[2][place] -= 1
         elif type in AddTypeIV:
             abacus[1][place] -= 1
-            for j in range(9999):                                                   #进位检测
+            for j in range(9999):                                                   #进位检查
                 if abacus[2][place-1-j] != 4:
                     abacus[2][place-1-j] += 1
                     break
                 elif abacus[2][place-1-j] == 4 and abacus[1][place-1-j] == 0:
                     abacus[2][place-1-j] = 0
                     abacus[1][place-1-j] = 1
+                    break
                 elif abacus[2][place-1-j] == 4 and abacus[1][place-1-j] == 1:
                     abacus[2][place-1-j] = 0
                     abacus[1][place-1-j] = 0
