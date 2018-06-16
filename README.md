@@ -13,7 +13,7 @@ https://en.wikipedia.org/wiki/Liu_Hui%27s_%CF%80_algorithm
 ###     Subtraction
 ###     Multiplication
 ###     TO DO：
-###     Division
+###     Division 除法太他妈难了！
 ###     Exponentiation
 ###     Rooting
 ###     
