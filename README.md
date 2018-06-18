@@ -1,4 +1,5 @@
-# oldWineInANewBottle
+#    oldWineInANewBottle
+##   Some old Chinese algorithm in Python.
 ##   Yi《易》
 ###     A Python script for DaYanShiFa by Zhu Xi.
 ##   Liu Hui's π algorithm 割圆术
