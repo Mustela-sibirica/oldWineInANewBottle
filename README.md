@@ -19,5 +19,5 @@
 ###     Division 除法太他妈难了！
 ###     Exponentiation
 ###     Rooting
-##   twelve temperament 中国三分损益法（十二律）
+##   twelve temperament 三分损益法（十二律）
 
